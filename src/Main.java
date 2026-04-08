@@ -62,8 +62,11 @@ public class Main {
             System.out.println("7. Peek");
             System.out.println("8. Add bill to queue");
             System.out.println("9. Complete next bill");
+
             System.out.println("10. Display queue");
-            System.out.println("11. Exit");
+            System.out.println("14. SHOW PHYSICAL ARRAY (Task 6)");
+
+            System.out.println("99. Exit");
             System.out.print("Choose option: ");
 
             int choice = scanner.nextInt();
@@ -182,8 +185,24 @@ public class Main {
                         System.out.println("No pending bills.");
                     }
                     break;
+                case 14:
+                    BankAccount[] physicalArray = new BankAccount[3];
+                    physicalArray[0] = new BankAccount("A1", "Predefined1", 100);
+                    physicalArray[1] = new BankAccount("A2", "Predefined2", 200);
+                    physicalArray[2] = new BankAccount("A3", "Predefined3", 300);
+                    System.out.println("--- Physical Structure (Array[3]) ---");
+                    System.out.println("1. Print accounts");
+                    System.out.println("2. Exit");
+                    int a= scanner.nextInt();
+                    if (a==1){
+                        for (BankAccount acc : physicalArray) {
+                            System.out.println(acc);
+                        }
+                    }
+                    break;
 
-                case 11:
+
+                case 99:
                     System.out.println("Exiting...");
                     return;
 

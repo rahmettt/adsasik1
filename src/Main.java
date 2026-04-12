@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-// ========================
-// Custom Node class
-// ========================
 class Node<T> {
     T data;
     Node<T> next;
@@ -13,9 +10,6 @@ class Node<T> {
     }
 }
 
-// ========================
-// Custom LinkedList
-// ========================
 class MyLinkedList<T> {
     private Node<T> head;
     private int size;
@@ -46,15 +40,11 @@ class MyLinkedList<T> {
         return size;
     }
 
-    // For-each support
     public Node<T> getHead() {
         return head;
     }
 }
 
-// ========================
-// Custom Stack (LIFO)
-// ========================
 class MyStack<T> {
     private Node<T> top;
 
@@ -94,9 +84,6 @@ class MyStack<T> {
     }
 }
 
-// ========================
-// Custom Queue (FIFO)
-// ========================
 class MyQueue<T> {
     private Node<T> front;
     private Node<T> rear;
@@ -125,9 +112,6 @@ class MyQueue<T> {
     }
 }
 
-// ========================
-// BankAccount class
-// ========================
 class BankAccount {
     String accountNumber;
     String username;
@@ -162,10 +146,6 @@ class BankAccount {
         return username + " - Balance: " + balance;
     }
 }
-
-// ========================
-// Main class
-// ========================
 public class Main {
     public static void main(String[] args) {
         MyLinkedList<BankAccount> accounts = new MyLinkedList<>();
@@ -195,7 +175,7 @@ public class Main {
 
             switch (mainMenuChoice) {
 
-                case 1: // --- Bank Menu ---
+                case 1:
                     System.out.println("\n--- Bank Menu ---");
                     System.out.println("1. Submit account opening request");
                     System.out.println("2. Deposit money");
@@ -246,7 +226,7 @@ public class Main {
                     }
                     break;
 
-                case 2: // --- ATM Menu ---
+                case 2:
                     System.out.println("\n--- ATM Menu ---");
                     System.out.println("1. Balance enquiry");
                     System.out.println("2. Withdraw");
@@ -275,7 +255,7 @@ public class Main {
                     }
                     break;
 
-                case 3: // --- Admin Area ---
+                case 3:
                     System.out.println("\n--- Admin Menu ---");
                     System.out.println("1. View and process account queue");
                     System.out.println("2. View and process bill payment queue");

@@ -23,7 +23,7 @@ The selected algorithms are:
 The program measures execution time using:
 
 ```java
-System.nanoTime()
+//System.nanoTime()
 ```
 
 and compares algorithm behavior on:
